@@ -10,7 +10,7 @@ function Result(props) {
   };
   return (
     <div>
-      <h1>Results</h1>
+      <h1 style={{ textAlign: 'center' }}>Results</h1>
       {props.quizManage.lsQuiz.results != undefined && (
         <div>
           {props.quizManage.lsQuiz != undefined &&
@@ -58,8 +58,10 @@ function Result(props) {
             backgroundColor: `${props.quizManage.resultColor}`,
           }}
         >
-          You scored {props.quizManage.score} out of{' '}
-          {props.quizManage.result.length}
+          You scored{' '}
+          {props.quizManage.score != undefined && props.quizManage.score} out of{' '}
+          {props.quizManage.result != undefined &&
+            props.quizManage.result.length}
         </p>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>

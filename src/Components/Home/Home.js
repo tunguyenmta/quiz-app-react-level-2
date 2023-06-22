@@ -95,7 +95,26 @@ function Home(props) {
           })}
       </div>
       {Object.keys(answers).length === 5 && (
-        <button onClick={submitAnswer}>Submit</button>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            paddingTop: '20px',
+          }}
+        >
+          <button
+            style={{
+              padding: '5px',
+              borderRadius: '5px',
+              backgroundColor: 'green',
+              color: 'white',
+              width: '50%',
+            }}
+            onClick={submitAnswer}
+          >
+            Submit
+          </button>
+        </div>
       )}
     </div>
   );

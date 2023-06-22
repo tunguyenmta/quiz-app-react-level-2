@@ -30,7 +30,6 @@ function* getResult({ type, payload }) {
 }
 
 function* reset() {
-  console.log('reset');
   yield put({ type: actQuiz.SET_RESET });
 }
 
